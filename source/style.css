@@ -1,28 +1,31 @@
 /* Global Colors */
 :root {
-  --black: #3a3a3a;
+  --black: #040404;
   --yellow: #fdec10;
   --red: #e63b25;
-  --white: #fafafa;
-  --grey: #bababa;
+  --white: #c0c0c0;
+  --grey: #0b0b0b;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   max-width: 1800px;
-  margin: 0 auto;
-  background-color: var(--white);
+  height: 100%;
+  margin: 0;
+  background-color: var(--grey);
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   overflow: hidden;
   height: 4rem;
-  padding: 1.2rem;
-  border-bottom: var(--grey) 2px solid;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.6rem;
+  /* border-bottom: var(--grey) 2px solid; */
 }
 
 nav img {
@@ -40,56 +43,96 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--black);
+  color: var(--white);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: lighter;
+  font-size: 1.2rem;
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 2.4rem;
-  color: var(--black);
-  letter-spacing: -1%
+  color: var(--white);
+  letter-spacing: -1%;
 }
 
 p {
-  font-size: 1.2rem;
-  color: var(--black);
+  font-size: 1.1rem;
+  color: var(--white);
 }
 
 section {
   width: 80%;
-  margin: 5rem auto;
-  text-align: center;
+  margin: 8rem auto;
+  text-align: left;
   /* padding-bottom: 2rem;
   border-bottom: var(--grey) 2px solid;   */
 }
 
 .hero {
-  margin-top: 6rem;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 50%;
   margin-bottom: 2rem;
-  text-align: center;
   padding: 0;
 }
 
+#hero-text {
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: var(--white);
+}
+
 .main-img {
+  background: linear-gradient(180deg, #00000000 78.46%, var(--grey) 100%),
+    linear-gradient(180deg, #121212 0%, #00000000 31.63%),
+    url(/source/images/starts_2023_d_crop.jpg);
   position: relative;
-  object-fit: cover;
-  object-position: center;
-  height: 65vh;
+  height: 100vh;
   width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  left: 0px;
+  top: 0px;
 }
 
 .grid-conainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 3rem;
 }
 
 .grid-item {
-  background-color: var(--grey);
+  background-color: var(--black);
+  border-radius: 1rem;
   width: 100%;
-  height: 200px;
-  border-radius: 0.6rem;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.grid-item img {
+  padding: 3rem 0;
+}
+
+.grid-item h3,
+p {
+  width: 80%;
+
+  color: var(--white);
+  margin-bottom: 0.2rem;
+  text-align: left;
+}
+
+.grid-item p {
+  font-weight: lighter;
+  padding-bottom: 2rem;
 }
