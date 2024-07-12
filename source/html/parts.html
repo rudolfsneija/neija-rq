@@ -1,96 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Parts - Neija Racing Quads</title>
     <link rel="stylesheet" href="/source/style.css" />
-</head>
-
-<body>
+    <script
+      src="https://kit.fontawesome.com/0bedb8ecac.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-        .grid-item {
-            height: 300px;
-            background-color: var(--grey);
+      .grid-item {
+        height: 300px;
+        background-color: var(--white);
+        border-radius: 0.5rem;
+      }
 
-            border-radius: 0.5rem;
-        }
-
-        .product-img {
-            display: block;
-            height: 40vh;
-            background-color: var(--grey);
-            width: 100%;
-            border-radius: 0.5rem;
-        }
+      .flex-container img {
+        background-color: var(--white);
+        height: 40vh;
+        /* width: 50%; */
+      }
     </style>
+  </head>
+
+  <body>
     <header>
-        <nav>
-            <a href="/index.html">
-                <img src="/source/images/icons/neija-logo.svg" alt="Neija Racing Quads logo" />
-            </a>
-            <ul>
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/source/html/parts.html"><span
-                            style="color: var(--red); border-bottom: 1px solid var(--red);">PARTS</span></a></li>
-                <li><a href="/source/html/service.html">SERVICE</a></li>
-                <li><a href="/source/html/builds.html">BUILDS</a></li>
-                <li><a href="/source/html/contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-        <h1>ATV TYRES & SPARE PARTS</h1>
+      <nav class="navbar" id="navbar"></nav>
+      <h1>ATV TYRES & SPARE PARTS</h1>
     </header>
     <main>
-        <section>
-            <h2>Goldspeed Tyres</h2>
-            <p>
-                Official distributor of Goldspeed tyres in Latvia. <br>
-                Wide selection of tyres for quads and crosscarts for all kinds of tracks and surfaces. Most popular
-                models are available in stock. Special orders are delivered within a week from the Netherlands. <br>
-                <br>
-                <a href="">See All Goldspeed</a>
-            </p>
-            <div class="grid-conainer">
-                <div class="grid-item">
-                </div>
-                <div class="grid-item">
-                </div>
-                <div class="grid-item">
-                </div>
-                <div class="grid-item">
-                </div>
-            </div>
-        </section>
-        <section>
+      <!--  style="background-color: var(--grey); padding: 2rem 10%" -->
+      <section>
+        <div class="heading-container">
+          <h2>Goldspeed Tyres</h2>
+
+          <a href=""><button>ALL GOLDSPEED</button></a>
+        </div>
+
+        <p>
+          Official distributor of Goldspeed tyres in Latvia. <br />
+          Wide selection of tyres for quads and crosscarts for all kinds of
+          tracks and surfaces. Most popular models are available in stock.
+          Special orders are delivered within a week from the Netherlands.
+        </p>
+
+        <div class="grid-container">
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+          <div class="grid-item"></div>
+        </div>
+      </section>
+      <section>
+        <div class="flex-container">
+          <img src="" alt="TFX suspension" />
+          <div>
             <h2>TFX Suspension</h2>
-            <img src="" alt="TFX suspension" class="product-img">
             <p>
-                Custom built suspension for motocross quads, ATVs, buggies, crosscarts.
+              Custom built suspension for motocross quads, ATVs, buggies,
+              crosscarts.
             </p>
-        </section>
-        <section>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="flex-container">
+          <div>
             <h2>Beringer Brakes</h2>
-            <img src="" alt="Beringer brakes" class="product-img">
+
             <p>
-                High performance brakes for quads, supermoto, road racing. Made in France.
+              High performance brakes for quads, supermoto, road racing. Made in
+              France.
             </p>
-        </section>
-        <section>
+          </div>
+          <img src="" alt="Beringer brakes" />
+        </div>
+      </section>
+      <section>
+        <div class="flex-container">
+          <img src="" alt="Bihr parts" />
+          <div>
             <h2>Bihr Parts</h2>
-            <img src="" alt="Bihr parts" class="product-img">
+
             <p>
-                Wide range of parts for quads, ATVs, motocross bikes. Express delivery within a week.
+              Wide range of parts for quads, ATVs, motocross bikes. Express
+              delivery within a week.
             </p>
-        </section>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>
-          <i>
-            @2024 Neija Racing Quads. All rights reserved.
-          </i>
-        </p>
-      </footer>
-</body>
-
+      <p>
+        <i> @2024 Neija Racing Quads. All rights reserved. </i>
+      </p>
+    </footer>
+  </body>
+  
+  <script src="/source/script.js"></script>
 </html>

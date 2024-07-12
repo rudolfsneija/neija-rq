@@ -1,9 +1,9 @@
 /* Global Colors */
 :root {
   --black: #111111;
-  --yellow: hsl(56, 75%, 50%);
+  --yellow: #dfd220;
   --red: #c9311d;
-  --white: #FCEFEF;
+  --white: #fcefef;
   --grey: #141414;
 }
 
@@ -21,8 +21,7 @@ h2 {
 
 h3 {
   font-size: 1.6rem;
-    color: var(--yellow);
-    /* text-shadow: 2px 2px 4px hsl(0, 0%, 5%); */
+  color: var(--yellow);
 }
 
 p,
@@ -42,23 +41,23 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 2000px;
   margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
   background-color: var(--black);
-  color: var(--white);
 }
 
-nav {
-  width: 80%;
-  margin: 2rem auto;
+.navbar {
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-nav img {
+.navbar img {
   height: 5rem;
 }
 
-nav ul {
+#navbar-items {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -66,50 +65,36 @@ nav ul {
   list-style: none;
 }
 
-nav ul li a {
+#navbar-items li a {
   color: var(--white);
   text-decoration: none;
   font-weight: lighter;
   font-size: 1.2rem;
 }
 
-.hero-img {
-  background: linear-gradient(180deg, #0000 78.46%, var(--black) 100%),
-    linear-gradient(180deg, var(--black) 0%, #0000 31.63%),
-    url("/source/images/starts_2023_d_crop.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-position: 70%;
-  background-repeat: no-repeat;
-  overflow: hidden;
+.menu-button {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
-#hero-overlay {
-  position: absolute;
-  width: max(400px, 40%);
-  margin-left: 10%;
-  bottom: 10%;
-  padding: 0;
-}
-
-#hero-text {
-  width: 100%;
-  margin: 0;
-  font-size: 3.6rem;
-  text-shadow: var(--black) 0 0 0.5rem;
-  color: var(--white);
+.heading-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 section {
-  width: 80%;
-  margin: 0 auto 20vh auto;
+  margin: 20vh 10%;
   text-align: left;
 }
 
-.grid-conainer {
+.grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  margin: 2rem auto;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
@@ -125,6 +110,7 @@ section {
 .grid-item img {
   padding: 4rem 0;
   align-self: center;
+  object-fit:contain;
   width: 100%;
   max-height: 2rem;
 }
@@ -134,86 +120,87 @@ section {
   margin-bottom: 0;
 }
 
-.img-overlay {
-  position: relative;
-  display: inline-block;
-
-  margin: 0 auto;
-  height: 85vh;
+.flex-container {
   width: 100%;
-}
-
-.img-overlay::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  background: 
-  linear-gradient(
-    0deg,
-    rgba(11, 11, 11, 0.25) 75%,
-    rgba(11, 11, 11, 0.95) 95%,
-    var(--black) 98%),
-  linear-gradient(
-    0deg,
-    var(--black) 2%,
-    rgba(11, 11, 11, 0.15) 10%);
-
-  pointer-events: none;
-}
-
-.img-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 0.5rem;
-}
-
-.build {
   display: flex;
   flex-direction: row;
-  margin: 2rem auto;
   background-color: var(--grey);
   border-radius: 0.5rem;
 }
 
-.build img {
+.flex-container img {
   width: 100%;
   object-position: center;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
-.build div {
-  margin: 2rem 4rem;
-  min-width: 250px;
+.flex-container div {
+  margin: 2rem 2rem;
 }
 
-.build div ul,
-.build div h3,
-.build div p {
+
+.flex-container div h3,
+.flex-container div p {
   width: 100%;
   margin-left: 0;
 }
 
-/* @ media for screens <=400px */
-@media screen and (width <= 800px) {
-  #service-img {
+.center-image {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    margin-top: 30vh;
+  }
+  p,
+  a {
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--white);
+  }
+  .menu-button {
+    display: block;
+  }
+  #navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: block;
+  }
+  .navbar-header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-
-  /* hide first and last img */
-  #service-img img:first-child,
-  #service-img img:last-child {
+  #navbar-items {
     display: none;
-  }
-
-  .build {
     flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0;
+  }
+  .heading-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flex-container {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 801px) {
+  #navbar-items {
+    display: flex;
   }
 }

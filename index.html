@@ -1,108 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neija Racing Quads</title>
+    <link rel="stylesheet" href="/source/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0bedb8ecac.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #hero-img {
+        background: linear-gradient(180deg, #0000 78.46%, var(--black) 100%),
+          linear-gradient(180deg, var(--black) 0%, #0000 31.63%),
+          url("/source/images/starts_2023_d_crop.jpg");
+        height: 100vh;
+        background-size: cover;
+        background-position: 70%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neija Racing Quads</title>
-  <link rel="stylesheet" href="/source/style.css" />
-</head>
+      #hero-overlay {
+        position: absolute;
+        width: 80vw;
+        margin-left: 10%;
+        bottom: 10%;
+        padding: 0;
+      }
 
-<body>
-  <header class="hero-img">
-    <nav>
-      <a href="/index.html">
-        <img src="/source/images/icons/neija-logo.svg" alt="Neija Racing Quads logo" />
-      </a>
-      <ul>
-        <li><a href="/index.html"><span
-              style="color: var(--red); border-bottom: 1px solid var(--red);">HOME</span></a>
-        </li>
-        <li><a href="/source/html/parts.html">PARTS</a></li>
-        <li><a href="/source/html/service.html">SERVICE</a></li>
-        <li><a href="/source/html/builds.html">BUILDS</a></li>
-        <li><a href="/source/html/contact.html">CONTACT</a></li>
-      </ul>
-    </nav>
-    <div id="hero-overlay">
-      <h1 id="hero-text">ATV SERVICE & PARTS</h1>
-    </div>
-  </header>
-  <main style="margin-top: 20vh;">
-    <section>
-      <h2>PARTS</h2>
-      <p>
-        Parts for motocross quads. Highes quality brands. Tried and tested. Delivered quick. <br />
-        <a href="/source/html/parts.html">See Parts</a>
-      </p>
-      <div class="grid-conainer">
-        <div class="grid-item">
-          <img src="/source/images/icons/goldspeed-simple-w.svg" />
-          <h3 class="grid-item-heading">TYRES</h3>
-          <p class="grid-item-description">
-            A large selection of wheels and tyres for any track and surface
-            conditions. Chosen by the best riders in the world.
-          </p>
-        </div>
-        <div class="grid-item">
-          <img src="/source/images/icons/beringer-w.png" />
-          <h3 class="grid-item-heading">BRAKES</h3>
-          <p class="grid-item-description">
-            The highest quality brakes for quad bikes, supermoto, superbikes
-            offering unmatched performance on the track. Made in France.
-          </p>
-        </div>
-        <div class="grid-item">
-          <img src="/source/images/icons/tfx.svg" />
-          <h3 class="grid-item-heading">SUSPENSION</h3>
-          <p class="grid-item-description">
-            Racing suspension for motocross quads, ATV quads, buggies and
-            crosscarts custom made in the Netherlands.
-          </p>
-        </div>
-        <div class="grid-item">
-          <img src="/source/images/icons/bihr-w.svg" />
-          <h3 class="grid-item-heading">SPARE PARTS</h3>
-          <p class="grid-item-description">
-            The largest selection in various spare parts for many different
-            kinds of quads and motorcycles. Express delivery to Europe.
-          </p>
-        </div>
+      #hero-text {
+        width: 100%;
+        margin: 0;
+        font-size: 3.6rem;
+        text-shadow: var(--black) 0 0 0.5rem;
+        color: var(--white);
+      }
+
+      @media screen and (width <= 800px) {
+        #hero-text {
+          font-size: 2.4rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header id="hero-img">
+      <nav class="navbar" id="navbar"></nav>
+      <div id="hero-overlay">
+        <h1 id="hero-text">ATV SERVICE & PARTS</h1>
       </div>
-    </section>
-    <div class="img-overlay">
-      <img src="/source/images/service/service3.jpeg" alt="quad service" />
-    </div>
-    <section>
-      <h2>ENGINE & SUSPENSION SERVICE</h2>
-      <p>
-        Specialising in motocross bikes and quads. Expert suspension and
-        engine maintenance and repair. <br />
-        <a href="/source/html/service.html">See Service</a>
-      </p>
-    </section>
-    <section>
-      <h2>FEATURED BUILD</h2>
-      <div class="build">
-        <img src="/source/images/builds/HONDA_TRX450_KTM_SX450F_3.jpg" alt="honda ktm hybrid quad" />
-        <div>
-          <h3>HONDA/SX450F HYBRID</h3>
-          <p style="color: var(--white); width: 100%;">
-            Modified <span>HONDA/SX-450F</span> hybrid quad for entry at the PDV 8H Endurance Race (2023).
-            <br />
-          </p>
-          <p style="margin-top: 2rem;"><a href="/source/html/builds.html">See Build</a></p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer>
-    <p>
-      <i>
-        @2024 Neija Racing Quads. All rights reserved.
-      </i>
-    </p>
-  </footer>
-</body>
+    </header>
+    <main>
+      <section>
+        <div class="heading-container">
+          <h2>RACING PARTS</h2>
 
+          <a href="/source/html/parts.html"><button>PARTS</button></a>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item">
+            <img src="/source/images/icons/goldspeed-simple-w.svg" />
+            <h3 class="grid-item-heading">TYRES</h3>
+            <p class="grid-item-description">
+              A large selection of wheels and tyres for any track and surface
+              conditions. Chosen by the best riders in the world.
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="/source/images/icons/beringer-w.png" />
+            <h3 class="grid-item-heading">BRAKES</h3>
+            <p class="grid-item-description">
+              The highest quality brakes for quad bikes, supermoto, superbikes
+              offering unmatched performance on the track. Made in France.
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="/source/images/icons/tfx.svg" />
+            <h3 class="grid-item-heading">SUSPENSION</h3>
+            <p class="grid-item-description">
+              Racing suspension for motocross quads, ATV quads, buggies and
+              crosscarts custom made in the Netherlands.
+            </p>
+          </div>
+          <div class="grid-item">
+            <img src="/source/images/icons/bihr-w.svg" />
+            <h3 class="grid-item-heading">SPARE PARTS</h3>
+            <p class="grid-item-description">
+              The largest selection in various spare parts for many different
+              kinds of quads and motorcycles. Express delivery to Europe.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="heading-container">
+          <h2>ENGINE & SUSPENSION SERVICE</h2>
+
+          <a href="/source/html/service.html"><button>SERVICE</button></a>
+        </div>
+
+        <img
+          src="/source/images/service/service3.jpeg"
+          alt="quad service"
+          class="center-image"
+        />
+      </section>
+
+      <section>
+        <div class="heading-container">
+          <h2>FEATURED BUILD</h2>
+
+          <a href="/source/html/builds.html"><button>BUILDS</button></a>
+        </div>
+
+        <div class="flex-container">
+          <img
+            src="/source/images/builds/HONDA_TRX450_KTM_SX450F_3.jpg"
+            alt="honda ktm hybrid quad"
+          />
+
+          <div>
+            <h3>HONDA/SX450F HYBRID</h3>
+            <p style="color: var(--white); width: 100%">
+              Modified <span>HONDA/SX-450F</span> hybrid quad for entry at the
+              PDV 8H Endurance Race (2023).
+              <br />
+            </p>
+            <p style="margin-top: 2rem">
+              <a href="/source/html/builds.html">See Build</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        <i> @2024 Neija Racing Quads. All rights reserved. </i>
+      </p>
+    </footer>
+  </body>
+  <script src="/source/script.js"></script>
 </html>
