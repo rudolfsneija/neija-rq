@@ -11,15 +11,26 @@
     ></script>
     <style>
       .grid-item {
-        height: 300px;
         background-color: var(--white);
         border-radius: 0.5rem;
+        padding: 0.5rem;
+      }
+      .grid-item img {
+        padding: 0;
+        margin: 0;
+        max-height: none;
+        width: 80%;
+        height: 100%;
+        object-fit: contain;
       }
 
       .flex-container img {
-        background-color: var(--white);
-        height: 40vh;
-        /* width: 50%; */
+        height: 50vh;
+      }
+      #bihr-logo {
+        height: 4rem;
+        width: auto;
+        padding: 8rem 4rem;
       }
     </style>
   </head>
@@ -30,39 +41,42 @@
       <h1>ATV TYRES & SPARE PARTS</h1>
     </header>
     <main>
-      <!--  style="background-color: var(--grey); padding: 2rem 10%" -->
       <section>
-        <div class="heading-container">
-          <h2>Goldspeed Tyres</h2>
-
-          <a href=""><button>ALL GOLDSPEED</button></a>
-        </div>
-
-        <p>
-          Official distributor of Goldspeed tyres in Latvia. <br />
-          Wide selection of tyres for quads and crosscarts for all kinds of
-          tracks and surfaces. Most popular models are available in stock.
-          Special orders are delivered within a week from the Netherlands.
-        </p>
-
-        <div class="grid-container">
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-          <div class="grid-item"></div>
-        </div>
-      </section>
-      <section>
-        <div class="flex-container">
-          <img src="" alt="TFX suspension" />
-          <div>
-            <h2>TFX Suspension</h2>
-            <p>
-              Custom built suspension for motocross quads, ATVs, buggies,
-              crosscarts.
-            </p>
+        <div
+          style="background-color: var(--grey); padding: 2rem; border-radius: rem;">
+          <div class="heading-container">
+            <h2>Goldspeed Tyres</h2>
+  
+            <!-- <a href=""><button>ALL GOLDSPEED</button></a> -->
+          </div>
+  
+          <p>
+            Official distributor of Goldspeed tyres in Latvia. <br />
+            Wide selection of tyres for quads and crosscarts for all kinds of
+            tracks and surfaces. Most popular models are available in stock.
+            Special orders are delivered within a week from the Netherlands.
+          </p>
+  
+          <div class="grid-container">
+            <div class="grid-item"><img src="/source/images/goldspeed/sc3.png" alt="atv tire goldspeed sc3"></div>
+            <div class="grid-item"><img src="/source/images/goldspeed/sc4.png" alt="atv tire goldspeed sc4"></div>
+            <div class="grid-item"><img src="/source/images/goldspeed/sx.png" alt="atv tire goldspeed sx"></div>
+            <div class="grid-item"><img src="/source/images/goldspeed/sxf.png" alt="atv tire goldspeed sxf"></div>
+          </div>
+        </section>
+        <section>
+          <div class="flex-container">
+            <img src="/source/images/parts/tfx.jpeg" alt="TFX suspension" />
+            <div>
+              <h2>TFX Suspension</h2>
+              <p>
+                Custom built suspension for motocross quads, ATVs, buggies,
+                crosscarts.
+              </p>
+            </div>
           </div>
         </div>
+        
       </section>
       <section>
         <div class="flex-container">
@@ -74,12 +88,12 @@
               France.
             </p>
           </div>
-          <img src="" alt="Beringer brakes" />
+          <img src="/source/images/parts/beringer.jpeg" alt="Beringer brakes" />
         </div>
       </section>
       <section>
         <div class="flex-container">
-          <img src="" alt="Bihr parts" />
+          <img src="/source/images/icons/bihr-w.svg" alt="Bihr parts" id="bihr-logo" />
           <div>
             <h2>Bihr Parts</h2>
 
@@ -93,7 +107,7 @@
     </main>
     <footer>
       <p>
-        <i> @2024 Neija Racing Quads. All rights reserved. </i>
+        <!-- <i> @2024 Neija Racing Quads. All rights reserved. </i> -->
       </p>
     </footer>
   </body>
