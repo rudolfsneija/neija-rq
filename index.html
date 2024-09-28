@@ -5,33 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neija Racing Quads</title>
     <link rel="stylesheet" href="/source/style.css" />
-    <script
-      src="https://kit.fontawesome.com/0bedb8ecac.js"
-      crossorigin="anonymous"
-    ></script>
+
     <style>
       #hero-img {
-        /* background: linear-gradient(180deg, #0000 92%, var(--white) 100%),
-          url("/source/images/qmxon_start.jpg"); */
         background: url("/source/images/qmxon_start.jpg");
         height: 75vh;
         background-size: cover;
-        background-position: top;
+        background-position: top right;
         background-repeat: no-repeat;
         overflow: hidden;
+      }
+
+      #hero-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       #hero-text {
         width: 100%;
         font-size: 2.4rem;
-        margin-top: 2rem;
+        margin: 2rem;
         text-align: center;
-        padding: 0 1rem;
-        /* text-shadow: var(--black) 0 0 0.5rem; */
         color: var(--black);
       }
 
       @media screen and (width <= 800px) {
+        .navbar img {
+          height: 4rem;
+        }
+        #hero-img {
+          height: 50vh;
+        }
         #hero-text {
           font-size: 2rem;
         }
@@ -40,16 +45,21 @@
   </head>
 
   <body>
-    <header id="hero-img">
+    <div id="hero-img">
       <nav class="navbar" id="navbar"></nav>
-    </header>
-    <h1 id="hero-text">MOTOCROSS ATV SERVICE & PERFORMANCE PARTS</h1>
+    </div>
+    <div id="hero-info">
+      <h1 id="hero-text">MOTOCROSS ATV SERVICE & PERFORMANCE PARTS</h1>
+      <a href="/source/html/contact.html"><button class="button-main">CONTACT</button></a>
+    </div>
+
+
     <main>
       <section>
         <div class="heading-container">
           <h2>ENGINE & SUSPENSION SERVICE</h2>
 
-          <a href="/source/html/service.html"><button>SERVICE</button></a>
+          <a href="/source/html/service.html"><button class="button-main">SERVICE</button></a>
         </div>
 
         <img
@@ -63,7 +73,7 @@
         <div class="heading-container">
           <h2>RACING PARTS</h2>
 
-          <a href="/source/html/parts.html"><button>PARTS</button></a>
+          <a href="/source/html/parts.html"><button class="button-main">PARTS</button></a>
         </div>
 
         <div class="grid-container">
@@ -106,7 +116,7 @@
         <div class="heading-container">
           <h2>FEATURED BUILD</h2>
 
-          <a href="/source/html/builds.html"><button>BUILDS</button></a>
+          <a href="/source/html/builds.html"><button class="button-main">BUILDS</button></a>
         </div>
 
         <div class="flex-container">
@@ -121,9 +131,6 @@
               Modified <span>HONDA/SX-450F</span> hybrid quad for entry at the
               PDV 8H Endurance Race (2023).
               <br />
-            </p>
-            <p style="margin-top: 2rem">
-              <a href="/source/html/builds.html">See Build</a>
             </p>
           </div>
         </div>

@@ -2,7 +2,7 @@
 :root {
   --black: #000000;
   --yellow: #e7d90f;
-  --red: #ff5425;
+  --red: #ee5425;
   --white: #f2f2f2;
   --grey: #d6d6d6;
 }
@@ -70,7 +70,6 @@ body {
 #navbar-items li a {
   color: var(--black);
   text-decoration: none;
-  /* font-weight: lighter; */
   font-size: 1.2rem;
 }
 
@@ -80,6 +79,23 @@ body {
   border: none;
   color: white;
   cursor: pointer;
+}
+
+#menu-icon {
+  height: 3rem;
+}
+
+.button-main {
+  padding: 0.7rem 1.2rem;
+  text-align: center;
+  background: var(--red);
+  border: none;
+  color: var(--white);
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .heading-container {

@@ -4,7 +4,7 @@ document.getElementById('navbar').innerHTML = `
     <img src="/source/images/icons/neija-logo.svg" alt="Neija Racing Quads logo" />
   </a>
   <button class="menu-button" id="menu-button">
-    <i class="fa-solid fa-bars fa-2xl" style="color:black"></i>
+    <img src="/source/images/icons/menu.svg" alt="Menu icon" id="menu-icon"/>
   </button>
 </div>
 
