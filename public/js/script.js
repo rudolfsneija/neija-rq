@@ -1,19 +1,19 @@
 document.getElementById('navbar').innerHTML = `
 <div class="navbar-header">
   <a href="/index.html">
-    <img src="/source/images/icons/neija-logo.svg" alt="Neija Racing Quads logo" />
+    <img src="../images/icons/neija-logo.svg" alt="Neija Racing Quads logo" />
   </a>
   <button class="menu-button" id="menu-button">
-    <img src="/source/images/icons/menu.svg" alt="Menu icon" id="menu-icon"/>
+    <img src="../images/icons/menu.svg" alt="Menu icon" id="menu-icon"/>
   </button>
 </div>
 
 <ul id="navbar-items">
-  <li><a href="/index.html" data-page="index">HOME</a></li>
-  <li><a href="/source/html/parts.html" data-page="parts">PARTS</a></li>
-  <li><a href="/source/html/service.html" data-page="service">SERVICE</a></li>
-  <li><a href="/source/html/builds.html" data-page="builds">BUILDS</a></li>
-  <li><a href="/source/html/contact.html" data-page="contact">CONTACT</a></li>
+  <li><a href="/index" data-page="index">HOME</a></li>
+  <li><a href="/parts" data-page="parts">PARTS</a></li>
+  <li><a href="/service" data-page="service">SERVICE</a></li>
+  <li><a href="/builds" data-page="builds">BUILDS</a></li>
+  <li><a href="/contact" data-page="contact">CONTACT</a></li>
 </ul>
 `;
 

@@ -1,4 +1,8 @@
 assets/
 other/
 
+node_modules/
+
 .venv/
+
+

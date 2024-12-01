@@ -44,7 +44,7 @@ images.forEach(path => {
     // Set the inner HTML using a template literal, with two h3 tags for the parts
     buildHtml.innerHTML = `
         <img
-            src="/source/images/builds/${path}"
+            src="../images/builds/${path}"
             alt="${frame} build"
         />
         <div>
