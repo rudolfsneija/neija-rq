@@ -4,5 +4,7 @@ other/
 node_modules/
 
 .venv/
+.env
+
 
 

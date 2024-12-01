@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require('path');
 
 // Import controllers
-// const quadBuildController = require('../controllers/quadBuildController');
+const quadBuildController = require('../controllers/quadBuildController');
 
 // Route for Home Page
 router.get('/', (req, res) => {
@@ -30,7 +30,10 @@ router.get('/service', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/html/service.html'));
 });
 
-// // Route for API endpoint to fetch all quad builds
-// router.get('/api/quad-builds', quadBuildController.getAllQuadBuilds);
+router.get('/api/quad-builds', quadBuildController.getAllQuadBuilds);
+router.get('/api/quad-builds/:id', quadBuildController.getQuadBuildById);
+router.post('/api/quad-builds', quadBuildController.createQuadBuild);
+router.put('/api/quad-builds/:id', quadBuildController.updateQuadBuild);
+router.delete('/api/quad-builds/:id', quadBuildController.deleteQuadBuild);
 
 module.exports = router;
