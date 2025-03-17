@@ -55,22 +55,21 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-6 lg:px-8 bg-gray-50 py-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold">Featured Build</h2>
+            <h2 className="text-3xl font-bold">Featured Build: NRQ25</h2>
             <p className="mt-4 text-lg text-gray-600">
-              Honda TRX450 hybrid with a KTM SXF450 engine. Special build for entry in the 2024 Pont de Vaux 24 hour race. <br />
-              Custom built subframe, airbox, nerbars with laser-cut foot pegs, extra large 22 liter fuel tank.
+              The NRQ25 is the latest build by Neija Racing Quads. It features a custom built frame, subframe, a-arms, steering stem, nerfbars and fuel tank.
             </p>
             <Link
-              to="/quad-builds"
+              to="/quad-builds/6"
               className="mt-8 inline-flex items-center space-x-2 text-yellow-600 hover:text-yellow-700"
             >
-              <span>View all builds</span>
+              <span>See build</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
           <div>
             <img
-              src="images/other/3e1bb17a-08b2-491c-9737-4669f4cbb0b2.jpeg"
+              src="images/other/NRQ1_C.jpeg"
               alt="ATV Racing"
               className="h-full w-full rounded-lg object-cover"
             />

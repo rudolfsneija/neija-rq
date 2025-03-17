@@ -337,14 +337,20 @@ export function BuildForm() {
           </div>
 
           <div>
-            <label htmlFor="description" className="block text-sm font-medium text-gray-300">Description</label>
+            <label htmlFor="description" className="block text-sm font-medium text-gray-300">
+              Description <span className="text-xs text-gray-500">(supports formatting)</span>
+            </label>
+            <div className="mb-2 text-xs text-gray-400">
+              <span className="block">Formatting: **bold text**, *italic text*, - bullet points, --- break line</span>
+              <span className="block">Use empty line for paragraph breaks</span>
+            </div>
             <textarea
               id="description"
               name="description"
               value={formData.description || ''}
               onChange={handleChange}
-              rows={4}
-              className="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm text-gray-100"
+              rows={6}
+              className="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm text-gray-100 font-mono"
             />
           </div>
 

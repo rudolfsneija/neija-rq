@@ -165,8 +165,12 @@ export function TyresPage() {
                     
                     {tyre.compound && (
                       <div className="flex items-center text-xs text-gray-600 font-medium">
-                        <div className="h-4 w-4 mr-1.5 flex items-center justify-center text-orange-600">
-                          <span className="font-semibold text-[16px]">C</span>
+                        <div className="h-4 w-4 mr-1.5 flex items-center justify-center">
+                          <span className={`font-semibold text-[16px] ${
+                            tyre.compound.toLowerCase().includes("soft") ? "text-blue-600" :
+                            tyre.compound.toLowerCase().includes("medium") ? "text-yellow-600" :
+                            "text-red-600"
+                          }`}>C</span>
                         </div>
                         <span>{tyre.compound}</span>
                       </div>

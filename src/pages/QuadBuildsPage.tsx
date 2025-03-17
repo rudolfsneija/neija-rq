@@ -114,10 +114,10 @@ export function QuadBuildsPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold">{build.name}</h3>
-                    <p className="mt-2 text-gray-600">
+                    <h3 className="text-2xl font-semibold">{build.name}</h3>
+                    {/* <p className="mt-2 text-gray-600">
                       {`${build.frame} / ${build.engine}`}
-                    </p>
+                    </p> */}
                     <div className="mt-4 flex justify-between text-sm text-gray-500">
                       <span>{build.build_year}</span>
                     </div>
