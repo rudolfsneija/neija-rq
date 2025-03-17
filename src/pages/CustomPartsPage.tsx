@@ -9,6 +9,13 @@ export function CustomPartsPage() {
     { src: "/images/custom_parts/swingarm/swingarm5.jpeg", alt: "Swingarm" },
   ];
 
+  const a_armsImages = [
+    { src: "/images/custom_parts/a_arms/a_arms_main.jpeg", alt: "A-Arms" },
+    { src: "/images/custom_parts/a_arms/a_arms1.jpeg", alt: "A-Arms" },
+    { src: "/images/custom_parts/a_arms/a_arms2.jpeg", alt: "A-Arms" },
+    { src: "/images/custom_parts/a_arms/a_arms3.jpeg", alt: "A-Arms" },
+  ];
+
   return (
     <div className="py-12">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -41,7 +48,27 @@ export function CustomPartsPage() {
             </div>
           </section>
 
-      
+          <section>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div>
+                <SimpleGallery 
+                              images={a_armsImages} 
+                              className="h-full"
+                            />
+              </div>
+              <div className="flex flex-col justify-center">
+                <h2 className="text-3xl font-bold">A-Arms</h2>
+                <p className="mt-4 text-lg text-gray-600">
+                  Custom A-Arms designed for racing quads. Made from high grade chromoly steel tubes for added strength and durability.
+                </p>
+                <ul className="mt-6 list-disc space-y-2 pl-5 text-gray-600">
+                  <li>Based on <i>Yamaha YFZ450R</i> suspension geometry</li>
+                  <li>Chromoly steel tube construction</li>
+                  <li>Reinforced struts for added durability</li>
+                </ul>
+              </div>
+            </div>
+          </section>
           
         </div>
       </div>

@@ -164,11 +164,19 @@ export function BuildForm() {
         formData.append('images', fileInput.files[i]);
       }
       
-      // For file uploads, we'll still use fetch directly since our API client
-      // doesn't have specific methods for form data uploads
+      // Get the authentication token from localStorage
+      const token = localStorage.getItem('authToken');
+      
       const response = await fetch(`/api/builds/${targetId}/images`, {
         method: 'POST',
         body: formData,
+        headers: {
+          // Don't set Content-Type with FormData
+          // Include authorization header
+          'Authorization': `Bearer ${token}`
+        },
+        // Include credentials
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -193,10 +201,15 @@ export function BuildForm() {
     if (!confirm('Are you sure you want to delete this image?')) return;
     
     try {
-      // For image management, we'll still use fetch directly since our API client
-      // doesn't have specific methods for these operations
+      // Get the authentication token
+      const token = localStorage.getItem('authToken');
+      
       const response = await fetch(`/api/builds/images/${imageId}`, {
         method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -213,8 +226,15 @@ export function BuildForm() {
 
   const handleSetPrimary = async (imageId: number) => {
     try {
+      // Get the authentication token
+      const token = localStorage.getItem('authToken');
+      
       const response = await fetch(`/api/builds/images/${imageId}/set-primary`, {
         method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+        credentials: 'include'
       });
       
       if (!response.ok) {
