@@ -1,0 +1,8 @@
+/api-dist
+/dist
+/logs
+/node_modules
+/uploads
+
+.env
+database.sqlite
