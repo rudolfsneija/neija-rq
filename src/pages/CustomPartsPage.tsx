@@ -40,9 +40,9 @@ export function CustomPartsPage() {
                 </p>
                 <ul className="mt-6 list-disc space-y-2 pl-5 text-gray-600">
                   <li>Based on <i>Yamaha YFZ450R</i> suspension geometry</li>
-                  <li>Chromoly steel tube construction</li>
+                  <li>Chromoly steel tube construction - strong and light</li>
+                  <li>Reinforced struts - Added support for increased durability</li>
                   <li>Integrated <i>Brembo</i> brake caliper mounts</li>
-                  <li>Reinforced struts for added durability</li>
                 </ul>
               </div>
             </div>
@@ -59,12 +59,14 @@ export function CustomPartsPage() {
               <div className="flex flex-col justify-center">
                 <h2 className="text-3xl font-bold">A-Arms</h2>
                 <p className="mt-4 text-lg text-gray-600">
-                  Custom A-Arms designed for racing quads. Made from high grade chromoly steel tubes for added strength and durability.
+                  Custom A-Arms designed for racing quads, built for performance and durability. Made from high-grade chromoly steel tubes.
                 </p>
                 <ul className="mt-6 list-disc space-y-2 pl-5 text-gray-600">
                   <li>Based on <i>Yamaha YFZ450R</i> suspension geometry</li>
-                  <li>Chromoly steel tube construction</li>
-                  <li>Reinforced struts for added durability</li>
+                  <li>Chromoly steel tube construction - strong and light</li>
+                  <li>Reinforced struts - Added support for increased durability</li>
+                  <li>Adjustable camber and caster - Allows fine-tuning of suspension geometry for different riding styles and track conditions</li>
+                  <li>Designed for use with FRAP ball joints - Easy bolt-on installation without the need for a press, unlike cup-style ball joints</li>
                 </ul>
               </div>
             </div>

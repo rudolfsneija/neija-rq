@@ -106,11 +106,11 @@ export function QuadBuildsPage() {
                   to={`/quad-builds/${build.id}`}
                   className="group overflow-hidden rounded-lg bg-white shadow-md transition hover:shadow-lg"
                 >
-                  <div className="aspect-w-16 aspect-h-9">
+                  <div className="relative overflow-hidden pb-[66.67%]">
                     <img
                       src={getPrimaryImage(build.id)}
                       alt={build.name}
-                      className="h-full w-full object-cover transition group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6">
@@ -139,11 +139,11 @@ export function QuadBuildsPage() {
                   to={`/quad-builds/${build.id}`}
                   className="overflow-hidden rounded-lg bg-white shadow hover:shadow-md transition"
                 >
-                  <div className="aspect-w-4 aspect-h-3">
+                  <div className="relative overflow-hidden pb-[66.67%]">
                     <img
                       src={getPrimaryImage(build.id)}
                       alt={build.name}
-                      className="h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
                   </div>
                   <div className="p-4">
