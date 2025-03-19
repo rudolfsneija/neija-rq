@@ -10,6 +10,7 @@ import { QuadBuildsPage } from './pages/QuadBuildsPage';
 import { BuildDetailsPage } from './pages/BuildDetailsPage';
 import { ServicePage } from './pages/ServicePage';
 import { ContactPage } from './pages/ContactPage';
+import { AboutUsPage } from './pages/AboutUsPage';
 import { LoginPage } from './pages/admin/LoginPage';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
@@ -58,6 +59,7 @@ function App() {
                   <Route path="/quad-builds" element={<QuadBuildsPage />} />
                   <Route path="/quad-builds/:id" element={<BuildDetailsPage />} />
                   <Route path="/service" element={<ServicePage />} />
+                  <Route path="/about" element={<AboutUsPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/cookie-policy" element={<CookiePolicy />} />
                 </Routes>

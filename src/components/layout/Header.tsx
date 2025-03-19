@@ -8,6 +8,7 @@ const navigation = [
   { name: 'Quad Builds', href: '/quad-builds' },
   { name: 'Racing Parts', href: '/racing-parts' },
   { name: 'Service', href: '/service' },
+  { name: 'About Us', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
 

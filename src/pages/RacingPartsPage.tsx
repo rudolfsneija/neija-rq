@@ -59,7 +59,7 @@ export function RacingPartsPage() {
               />
               <h3 className="text-xl font-semibold">Beringer Brakes</h3>
               <p className="mt-2 text-gray-600">
-                Performance brakes for quads, supermoto, road racing. Made in France.
+                Performance brakes for quads, supermoto, road racing. Made in France. Official distributor in Latvia.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md">
