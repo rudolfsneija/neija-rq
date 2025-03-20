@@ -5,6 +5,8 @@ import { AdminLayout } from './components/layout/AdminLayout';
 import { HomePage } from './pages/HomePage';
 import { RacingPartsPage } from './pages/RacingPartsPage';
 import { TyresPage } from './pages/TyresPage';
+import { TfxSuspensionPage } from './pages/TfxSuspensionPage';
+import { BeringerPage } from './pages/BeringerPage';
 import { CustomPartsPage } from './pages/CustomPartsPage';
 import { QuadBuildsPage } from './pages/QuadBuildsPage';
 import { BuildDetailsPage } from './pages/BuildDetailsPage';
@@ -55,6 +57,8 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/racing-parts" element={<RacingPartsPage />} />
                   <Route path="/racing-parts/tyres" element={<TyresPage />} />
+                  <Route path="/racing-parts/tfx-suspension" element={<TfxSuspensionPage />} />
+                  <Route path="/racing-parts/beringer" element={<BeringerPage />} />
                   <Route path="/custom-parts" element={<CustomPartsPage />} />
                   <Route path="/quad-builds" element={<QuadBuildsPage />} />
                   <Route path="/quad-builds/:id" element={<BuildDetailsPage />} />

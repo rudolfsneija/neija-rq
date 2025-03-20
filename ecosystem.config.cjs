@@ -1,6 +1,6 @@
 module.exports = {
   apps: [{
-    name: "neija-rt-website",
+    name: "neija-racing-quads",
     script: "./api-dist/api/server.js",
     instances: 1,
     exec_mode: "fork",

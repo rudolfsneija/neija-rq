@@ -152,17 +152,24 @@ export function AboutUsPage() {
               <div className="flex flex-col justify-center">
                 <h2 className="text-3xl font-bold">Niks Rūdolfs Neija</h2>
                 <p className="mt-4 text-lg text-gray-600">
-                  Author of this website including design, content and programming. Throughout the years designed the graphics for racing quads, taken professional photos and videos of quad builds and racing events for Neija Racing Quads.
+                  Author of this website including design, content and
+                  programming. Throughout the years designed the graphics for
+                  racing quads, taken professional photos and videos of quad
+                  builds and racing events for Neija Racing Quads.
                 </p>
 
                 <p className="mt-4 text-lg text-gray-600">
-                  The website is written in TypeScript using React and Tailwind CSS for the frontend, and Node.js with Express for the backend. It is self-hosted on an Intel NUC server. The majority of the images seen in the website were taken by me, including the Blender 3D renders of the NRQ parts.
+                  The website is written in TypeScript using React and Tailwind
+                  CSS for the frontend, and Node.js with Express for the
+                  backend. It is self-hosted on an Intel NUC server. The
+                  majority of the images seen in the website were taken by me,
+                  including the Blender 3D renders of the NRQ parts.
                 </p>
 
                 <p className="mt-4 text-lg text-gray-600">
-                  Founder of SIA "KNN Serviss" specialising in IT solutions, cybersecurity, enterprise Wi-Fi and video surveillance.
+                  Founder of SIA "KNN Serviss" specialising in IT solutions,
+                  cybersecurity, enterprise Wi-Fi and video surveillance.
                 </p>
-
 
                 <div className="mt-6 flex items-center space-x-6">
                   <div className="flex items-center space-x-2">
@@ -176,13 +183,10 @@ export function AboutUsPage() {
                       knn.lv
                     </a>
                   </div>
-
                 </div>
               </div>
             </div>
           </section>
-
-
         </div>
       </div>
     </div>
