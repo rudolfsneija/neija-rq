@@ -1,6 +1,13 @@
 import { SimpleGallery } from "../components/SimpleGallery";
 
 export function CustomPartsPage() {
+  const frameImages = [
+    { src: "/images/custom_parts/frame/frame1.webp", alt: "Frame" },
+    { src: "/images/custom_parts/frame/frame2.webp", alt: "Frame" },
+    { src: "/images/custom_parts/frame/frame3.webp", alt: "Frame" },
+    { src: "/images/custom_parts/frame/frame4.webp", alt: "Frame" },
+  ];
+
   const swingarmImages = [
     { src: "/images/custom_parts/swingarm/swingarm4.jpeg", alt: "Swingarm" },
     { src: "/images/custom_parts/swingarm/swingarm1.jpeg", alt: "Swingarm" },
@@ -25,6 +32,31 @@ export function CustomPartsPage() {
         </p>
 
         <div className="mt-16 space-y-24">
+
+          <section>
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div>
+                <SimpleGallery 
+                              images={frameImages} 
+                              className="h-full"
+                            />
+              </div>
+              <div className="flex flex-col justify-center">
+                <h2 className="text-3xl font-bold">Frame</h2>
+                <p className="mt-4 text-lg text-gray-600">
+                  Hand-built ATV frame handcrafted from high grade chromoly steel tubes.
+                </p>
+                <ul className="mt-6 list-disc space-y-2 pl-5 text-gray-600">
+                  <li>Based on <i>Yamaha YFZ450R</i> suspension geometry</li>
+                  <li>Mounts for a <i>KTM SXF</i> engine</li>
+                  <li>Robust design for quick and easy assembly and disassembly</li>
+                  <li>Chromoly steel tube construction - strong and light</li>
+                  <li>Reinforced struts - Added support for increased durability</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <section>
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               <div>
