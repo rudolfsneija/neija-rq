@@ -3,6 +3,7 @@
 /logs
 /node_modules
 /uploads
+/api/node_modules
 
 .env
 database.sqlite

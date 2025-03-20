@@ -1,5 +1,8 @@
 {
   "name": "neija-rt-api",
   "type": "commonjs",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "tsx": "^4.19.3"
+  }
 }
