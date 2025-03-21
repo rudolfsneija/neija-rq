@@ -43,7 +43,7 @@ export function RacingPartsPage() {
               />
               <h3 className="text-xl font-semibold">TFX Suspension</h3>
               <p className="mt-2 text-gray-600">
-                High-quality custom built suspension. 4-way adjustable.
+                High-quality custom built suspension.
               </p>
               <Link
                 to="/racing-parts/tfx-suspension"

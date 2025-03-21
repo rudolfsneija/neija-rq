@@ -101,7 +101,7 @@ export function HomePage() {
               />
               <h3 className="text-xl font-semibold">TFX Suspension</h3>
               <p className="mt-2 text-gray-600">
-                High-quality custom built suspension. 4-way adjustable.
+                High-quality custom built suspension.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md">

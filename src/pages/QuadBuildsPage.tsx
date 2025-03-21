@@ -131,7 +131,7 @@ export function QuadBuildsPage() {
         {/* All Other Builds */}
         {!loading && regularBuilds.length > 0 && (
           <section className="mt-24">
-            <h2 className="text-2xl font-bold">All Builds</h2>
+            <h2 className="text-2xl font-bold">Other Builds</h2>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {regularBuilds.map((build) => (
                 <Link 

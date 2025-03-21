@@ -12,12 +12,15 @@ export function AboutUsPage() {
   ];
 
   const karlisImages = [
-    { src: "/images/about_us/kaza1_D.jpeg", alt: "Karlis Neija Quad" },
-    { src: "/images/about_us/kaza2_D.jpeg", alt: "Karlis Neija Quad" },
+    { src: "/images/about_us/kaza_new.jpeg", alt: "Karlis Neija Quad" },
   ];
 
   const rudisImages = [
     { src: "/images/about_us/es_kramolin.jpg", alt: "Niks Rudolfs Neija" },
+  ];
+
+  const endijaImages = [
+    { src: "/images/about_us/endija.jpeg", alt: "Endija Neija" },
   ];
 
   return (
@@ -43,11 +46,7 @@ export function AboutUsPage() {
                 </p>
 
                 <p className="mt-4 text-lg text-gray-600">
-                  Racing motorcycles professionally since 1985, multiple-time
-                  champion in Superbike and Superport classes. Racing quads
-                  professionally since 2006, multiple-time champion in Latvian
-                  and Baltic Championships. Represented team Latvia in Quad
-                  Motocross of Nations.
+                  Throughout 1985-2023 over 20x Champion titles in Latvian and Baltic Championships - road racing 125cc, 250cc, Supersport, Superbike, quad motocross, cross country and winter motocross. 3x represented team Latvia in the Quad Motocross of Nations.
                 </p>
 
                 <p className="mt-4 text-lg text-gray-600">
@@ -161,9 +160,7 @@ export function AboutUsPage() {
                 <p className="mt-4 text-lg text-gray-600">
                   The website is written in TypeScript using React and Tailwind
                   CSS for the frontend, and Node.js with Express for the
-                  backend. It is self-hosted on an Intel NUC server. The
-                  majority of the images seen in the website were taken by me,
-                  including the Blender 3D renders of the NRQ parts.
+                  backend. It is self-hosted on an Intel NUC server. The NRQ parts renders were made with Blender.
                 </p>
 
                 <p className="mt-4 text-lg text-gray-600">
@@ -184,6 +181,24 @@ export function AboutUsPage() {
                     </a>
                   </div>
                 </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-white p-6 rounded-xl">
+            <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+              <div className="rounded-lg overflow-hidden">
+                <SimpleGallery
+                  images={endijaImages}
+                  className="h-full rounded-lg"
+                />
+              </div>
+              <div className="flex flex-col justify-center">
+                <h2 className="text-3xl font-bold">Endija Neija</h2>
+                <p className="mt-4 text-lg text-gray-600">
+                  The heart and soul behind the scenes — the unwavering supporter at every race, every championship. Her strength, patience, and constant encouragement have been the foundation of Neija Racing Quads. Whether cheering from the sidelines or helping through the toughest moments, she's always been there — not just as family, but as the quiet force that keeps everything moving forward.
+                </p>
+                
               </div>
             </div>
           </section>
