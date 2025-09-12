@@ -1,6 +1,6 @@
 import { Phone, Mail, Building2, Facebook, Instagram } from 'lucide-react';
 import { useState } from 'react';
-import { GoogleMap } from '../components/GoogleMap';
+import { LeafletMap } from '../components/LeafletMap';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -137,14 +137,13 @@ export function ContactPage() {
             </div>
           </div>
 
-          {/* Google Map - Bigger and to the right */}
+          {/* Leaflet Map - Replace GoogleMap */}
           <div className="h-80 lg:h-96">
-            <GoogleMap 
+            <LeafletMap 
               address="Rožu iela 12, Ozolnieki, Latvia, LV-3018"
               lat={locationCoords.lat}
               lng={locationCoords.lng}
               zoom={16}
-              placeId="ChIJv7pfUB4l70YRxCKM5EyY_yc"
             />
           </div>
         </div>
