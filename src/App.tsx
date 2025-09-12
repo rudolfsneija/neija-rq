@@ -5,11 +5,14 @@ import { AdminLayout } from './components/layout/AdminLayout';
 import { HomePage } from './pages/HomePage';
 import { RacingPartsPage } from './pages/RacingPartsPage';
 import { TyresPage } from './pages/TyresPage';
+import { TfxSuspensionPage } from './pages/TfxSuspensionPage';
+import { BeringerPage } from './pages/BeringerPage';
 import { CustomPartsPage } from './pages/CustomPartsPage';
 import { QuadBuildsPage } from './pages/QuadBuildsPage';
 import { BuildDetailsPage } from './pages/BuildDetailsPage';
 import { ServicePage } from './pages/ServicePage';
 import { ContactPage } from './pages/ContactPage';
+import { AboutUsPage } from './pages/AboutUsPage';
 import { LoginPage } from './pages/admin/LoginPage';
 import { ProtectedRoute } from './components/auth/ProtectedRoute';
 import { AuthProvider } from './contexts/AuthContext';
@@ -54,10 +57,13 @@ function App() {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/racing-parts" element={<RacingPartsPage />} />
                   <Route path="/racing-parts/tyres" element={<TyresPage />} />
+                  <Route path="/racing-parts/tfx-suspension" element={<TfxSuspensionPage />} />
+                  <Route path="/racing-parts/beringer" element={<BeringerPage />} />
                   <Route path="/custom-parts" element={<CustomPartsPage />} />
                   <Route path="/quad-builds" element={<QuadBuildsPage />} />
                   <Route path="/quad-builds/:id" element={<BuildDetailsPage />} />
                   <Route path="/service" element={<ServicePage />} />
+                  <Route path="/about" element={<AboutUsPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/cookie-policy" element={<CookiePolicy />} />
                 </Routes>

@@ -1,6 +1,6 @@
-import { Phone, Mail, Building2 } from 'lucide-react';
+import { Phone, Mail, Building2, Facebook, Instagram } from 'lucide-react';
 import { useState } from 'react';
-import { GoogleMap } from '../components/GoogleMap';
+import { LeafletMap } from '../components/LeafletMap';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -105,17 +105,45 @@ export function ContactPage() {
                   <p className="text-gray-600">agris@neija.lv</p>
                 </div>
               </div>
+              
+              {/* Social Media Links */}
+              <h3 className="text-lg font-semibold mt-8 mb-4">Follow Us</h3>
+              <div className="flex items-center space-x-4">
+                <Facebook className="h-6 w-6 text-yellow-400 flex-shrink-0" />
+                <div>
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=100087755504783" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-blue-600 font-semibold"
+                  >
+                    Neija Racing Quads
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center space-x-4">
+                <Instagram className="h-6 w-6 text-yellow-400 flex-shrink-0" />
+                <div>
+                  <a 
+                    href="https://www.instagram.com/neijaracingquads/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-pink-600 font-semibold"
+                  >
+                    @neijaracingquads
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Google Map - Bigger and to the right */}
+          {/* Leaflet Map - Replace GoogleMap */}
           <div className="h-80 lg:h-96">
-            <GoogleMap 
+            <LeafletMap 
               address="Rožu iela 12, Ozolnieki, Latvia, LV-3018"
               lat={locationCoords.lat}
               lng={locationCoords.lng}
               zoom={16}
-              placeId="ChIJv7pfUB4l70YRxCKM5EyY_yc"
             />
           </div>
         </div>

@@ -45,7 +45,7 @@ app.use('/uploads', express.static(join(process.cwd(), 'uploads'), {
 }));
 
 // Trust proxy headers if your app is behind a reverse proxy
-// app.set('trust proxy', true);
+app.set('trust proxy', true);
 
 // Create logs directory
 const logsDir = path.join(process.cwd(), 'logs');

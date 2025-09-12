@@ -4,6 +4,7 @@ import { ArrowLeft, Gauge, Hammer } from 'lucide-react';
 import { Build, BuildImage } from '../lib/types';
 import { buildsApi } from '../lib/api';
 import { SimpleGallery } from '../components/SimpleGallery';
+import { FormattedText } from '../components/FormattedText';
 
 export function BuildDetailsPage() {
   const { id } = useParams<{ id: string }>();
@@ -43,10 +44,20 @@ export function BuildDetailsPage() {
   }, [id]);
 
   // Convert images to format expected by SimpleGallery
-  const galleryImages = images.map(img => ({
-    src: img.image_path,
-    alt: build?.name || 'Build image'
-  }));
+  // Sort images to ensure primary image appears first
+  const galleryImages = images
+    .sort((a, b) => {
+      // If a is primary, it comes first
+      if (a.is_primary && !b.is_primary) return -1;
+      // If b is primary, it comes first
+      if (!a.is_primary && b.is_primary) return 1;
+      // Otherwise maintain original order
+      return 0;
+    })
+    .map(img => ({
+      src: img.image_path,
+      alt: build?.name || 'Build image'
+    }));
 
   if (loading) {
     return (
@@ -67,7 +78,7 @@ export function BuildDetailsPage() {
           <div className="my-12 rounded-md bg-red-50 p-4 text-red-700">
             <p>{error || 'Build not found'}</p>
             <Link to="/quad-builds" className="mt-4 inline-block text-red-700 underline">
-              Back to all builds
+              All builds
             </Link>
           </div>
         </div>
@@ -145,21 +156,21 @@ export function BuildDetailsPage() {
               <h2 className="text-xl font-bold">Description</h2>
               <div className="mt-2 text-gray-600">
                 {build.description ? (
-                  <p>{build.description}</p>
+                  <FormattedText text={build.description} />
                 ) : (
                   <p>Custom {build.frame} build with {build.engine} engine.</p>
                 )}
               </div>
             </div>
             
-            <div className="mt-8">
-              <h2 className="text-xl font-bold">Interested in a similar build?</h2>
+            <div className="mt-16">
+              <h2 className="text-l font-bold">Interested in a similar build?</h2>
               <p className="mt-2 text-gray-600">
-                Contact us to discuss how we can create a custom ATV build tailored to your racing needs.
+                Contact us to discuss how we can create a custom racing quad build tailored to your needs.
               </p>
               <Link
                 to="/contact"
-                className="mt-4 inline-block rounded-lg bg-yellow-400 px-6 py-3 text-white hover:bg-yellow-500 transition"
+                className="mt-4 inline-block rounded-lg bg-gray-500 px-6 py-3 text-white hover:bg-gray-600 transition"
               >
                 Get in Touch
               </Link>

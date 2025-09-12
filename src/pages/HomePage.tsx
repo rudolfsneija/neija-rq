@@ -26,12 +26,12 @@ export function HomePage() {
       </section>
 
       {/* Custom Parts */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <section className="mx-auto max-w-7xl px-4 lg:px-6">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 items-center min-h-[600px]">
           <div>
             <img
-              src="/images/custom_parts/swingarm/swingarm-transparent4_D.png"
-              alt="Swingarm"
+              src="images/custom_parts/frame/old/ramis_n.png"
+              alt="Neija Racing Quads Full Frame"
               className="h-full w-full rounded-lg object-cover"
             />
           </div>
@@ -52,25 +52,24 @@ export function HomePage() {
       </section>
 
       {/* Featured Build */}
-      <section className="mx-auto max-w-7xl px-6 lg:px-8 bg-gray-50 py-16">
+      <section className="mx-auto max-w-7xl px-6 lg:px-8 bg-gray-50 py-10">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold">Featured Build</h2>
+            <h2 className="text-3xl font-bold">Featured Build: NRQ25 PDV</h2>
             <p className="mt-4 text-lg text-gray-600">
-              Honda TRX450 hybrid with a KTM SXF450 engine. Special build for entry in the 2024 Pont de Vaux 24 hour race. <br />
-              Custom built subframe, airbox, nerbars with laser-cut foot pegs, extra large 22 liter fuel tank.
+              NRQ25 PDV is the latest build by Neija Racing Quads. Special build for entry in the 2025 Pont de Vaux 12-hour race. Custom made chasis.
             </p>
             <Link
-              to="/quad-builds"
+              to="/quad-builds/21"
               className="mt-8 inline-flex items-center space-x-2 text-yellow-600 hover:text-yellow-700"
             >
-              <span>View all builds</span>
+              <span>See build</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
           </div>
           <div>
             <img
-              src="images/other/3e1bb17a-08b2-491c-9737-4669f4cbb0b2.jpeg"
+              src="images/other/nrq25_pdv_s_home.jpeg"
               alt="ATV Racing"
               className="h-full w-full rounded-lg object-cover"
             />
@@ -102,7 +101,7 @@ export function HomePage() {
               />
               <h3 className="text-xl font-semibold">TFX Suspension</h3>
               <p className="mt-2 text-gray-600">
-                High-quality custom built suspension. 4-way adjustable.
+                High-quality custom built suspension.
               </p>
             </div>
             <div className="rounded-lg bg-white p-6 shadow-md">

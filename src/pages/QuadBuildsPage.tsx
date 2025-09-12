@@ -106,18 +106,18 @@ export function QuadBuildsPage() {
                   to={`/quad-builds/${build.id}`}
                   className="group overflow-hidden rounded-lg bg-white shadow-md transition hover:shadow-lg"
                 >
-                  <div className="aspect-w-16 aspect-h-9">
+                  <div className="relative overflow-hidden pb-[66.67%]">
                     <img
                       src={getPrimaryImage(build.id)}
                       alt={build.name}
-                      className="h-full w-full object-cover transition group-hover:scale-105"
+                      className="absolute inset-0 h-full w-full object-cover transition group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-xl font-semibold">{build.name}</h3>
-                    <p className="mt-2 text-gray-600">
+                    <h3 className="text-2xl font-semibold">{build.name}</h3>
+                    {/* <p className="mt-2 text-gray-600">
                       {`${build.frame} / ${build.engine}`}
-                    </p>
+                    </p> */}
                     <div className="mt-4 flex justify-between text-sm text-gray-500">
                       <span>{build.build_year}</span>
                     </div>
@@ -131,7 +131,7 @@ export function QuadBuildsPage() {
         {/* All Other Builds */}
         {!loading && regularBuilds.length > 0 && (
           <section className="mt-24">
-            <h2 className="text-2xl font-bold">All Builds</h2>
+            <h2 className="text-2xl font-bold">Other Builds</h2>
             <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {regularBuilds.map((build) => (
                 <Link 
@@ -139,11 +139,11 @@ export function QuadBuildsPage() {
                   to={`/quad-builds/${build.id}`}
                   className="overflow-hidden rounded-lg bg-white shadow hover:shadow-md transition"
                 >
-                  <div className="aspect-w-4 aspect-h-3">
+                  <div className="relative overflow-hidden pb-[66.67%]">
                     <img
                       src={getPrimaryImage(build.id)}
                       alt={build.name}
-                      className="h-full w-full object-cover"
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
                   </div>
                   <div className="p-4">

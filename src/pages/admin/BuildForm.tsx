@@ -164,11 +164,19 @@ export function BuildForm() {
         formData.append('images', fileInput.files[i]);
       }
       
-      // For file uploads, we'll still use fetch directly since our API client
-      // doesn't have specific methods for form data uploads
+      // Get the authentication token from localStorage
+      const token = localStorage.getItem('authToken');
+      
       const response = await fetch(`/api/builds/${targetId}/images`, {
         method: 'POST',
         body: formData,
+        headers: {
+          // Don't set Content-Type with FormData
+          // Include authorization header
+          'Authorization': `Bearer ${token}`
+        },
+        // Include credentials
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -193,10 +201,15 @@ export function BuildForm() {
     if (!confirm('Are you sure you want to delete this image?')) return;
     
     try {
-      // For image management, we'll still use fetch directly since our API client
-      // doesn't have specific methods for these operations
+      // Get the authentication token
+      const token = localStorage.getItem('authToken');
+      
       const response = await fetch(`/api/builds/images/${imageId}`, {
         method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -213,8 +226,15 @@ export function BuildForm() {
 
   const handleSetPrimary = async (imageId: number) => {
     try {
+      // Get the authentication token
+      const token = localStorage.getItem('authToken');
+      
       const response = await fetch(`/api/builds/images/${imageId}/set-primary`, {
         method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        },
+        credentials: 'include'
       });
       
       if (!response.ok) {
@@ -317,14 +337,20 @@ export function BuildForm() {
           </div>
 
           <div>
-            <label htmlFor="description" className="block text-sm font-medium text-gray-300">Description</label>
+            <label htmlFor="description" className="block text-sm font-medium text-gray-300">
+              Description <span className="text-xs text-gray-500">(supports formatting)</span>
+            </label>
+            <div className="mb-2 text-xs text-gray-400">
+              <span className="block">Formatting: **bold text**, *italic text*, - bullet points, --- break line</span>
+              <span className="block">Use empty line for paragraph breaks</span>
+            </div>
             <textarea
               id="description"
               name="description"
               value={formData.description || ''}
               onChange={handleChange}
-              rows={4}
-              className="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm text-gray-100"
+              rows={6}
+              className="mt-1 block w-full px-3 py-2 bg-gray-800 border border-gray-700 rounded-md shadow-sm text-gray-100 font-mono"
             />
           </div>
 
